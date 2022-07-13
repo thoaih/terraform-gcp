@@ -3,7 +3,7 @@ variable "project" {
 }
 
 variable "credentials_file" {
-  default = "/Users/thoai.ho/Downloads/ila-collab-terraform.json"
+  default = "/var/nfs/airflow/connections/ila-collab-terraform.json"
 }
 
 variable "region" {
