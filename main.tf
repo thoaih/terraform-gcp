@@ -9,7 +9,7 @@
 
 provider "google" {
   # credentials = file(var.credentials_file)
-  credentials = {key=GOOGLE_CREDENTIALS}
+  credentials = var.GOOGLE_CREDENTIALS
 
   project = var.project
   region  = var.region
