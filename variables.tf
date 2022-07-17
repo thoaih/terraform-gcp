@@ -2,8 +2,9 @@ variable "project" {
   default = "ila-collab"
 }
 
-variable "credentials_file" {
-  default = "/var/nfs/airflow/connections/ila-collab-terraform.json"
+variable "GOOGLE_CREDENTIALS" {
+  # default = "/Users/thoai.ho/Downloads/ila-collab-terraform.json"
+  description = "service account key file json"
 }
 
 variable "region" {
