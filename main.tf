@@ -29,7 +29,7 @@ resource "google_compute_network" "vpc_network" {
 
 resource "google_compute_global_address" "private_ip_address" {
   # provider = google-beta
-  project  = var.project
+  project = var.project
 
   name          = "private-ip-address"
   purpose       = "VPC_PEERING"
