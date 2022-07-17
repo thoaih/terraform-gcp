@@ -1,1 +1,0 @@
-GOOGLE_CREDENTIALS = { "type": "service_account", "project_id": "ila-collab" }
