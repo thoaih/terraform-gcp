@@ -1,14 +1,19 @@
-# terraform {
-#   required_providers {
-#     google = {
-#       source  = "hashicorp/google"
-#       version = "4.24.0"
-#     }
-#   }
-# }
+terraform {
+  # required_providers {
+  #   google = {
+  #     source  = "hashicorp/google"
+  #     version = "4.28.0"
+  #   }
+  # }
+  cloud {
+    organization = "ila-bi"
+    workspaces {
+      name = "terraform-gcp"
+    }
+  }
+}
 
 provider "google" {
-  # credentials = file(var.credentials_file)
   credentials = var.GOOGLE_CREDENTIALS
 
   project = var.project
@@ -23,7 +28,7 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_global_address" "private_ip_address" {
-  provider = google-beta
+  # provider = google-beta
   project  = var.project
 
   name          = "private-ip-address"
@@ -34,7 +39,7 @@ resource "google_compute_global_address" "private_ip_address" {
 }
 
 resource "google_service_networking_connection" "private_vpc_connection" {
-  provider = google-beta
+  # provider = google-beta
 
   network                 = google_compute_network.vpc_network.id
   service                 = "servicenetworking.googleapis.com"
@@ -88,7 +93,7 @@ resource "google_compute_firewall" "airflow-allow-https" {
 #     ports    = ["1112"]
 #   }
 
-#   source_ranges = ["10.148.0.0/20"]
+#   source_ranges = ["0.0.0.0/0"]
 # }
 
 resource "google_compute_firewall" "airflow-allow-icmp" {
