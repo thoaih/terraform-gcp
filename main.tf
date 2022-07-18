@@ -84,17 +84,17 @@ resource "google_compute_firewall" "airflow-allow-https" {
   source_ranges = ["0.0.0.0/0"]
 }
 
-# resource "google_compute_firewall" "allow-voip" {
-#   name    = "allow-voip"
-#   network = google_compute_network.vpc_network.name
+resource "google_compute_firewall" "allow-voip" {
+  name    = "allow-voip"
+  network = google_compute_network.vpc_network.name
 
-#   allow {
-#     protocol = "tcp"
-#     ports    = ["1112"]
-#   }
+  allow {
+    protocol = "tcp"
+    ports    = ["1112"]
+  }
 
-#   source_ranges = ["0.0.0.0/0"]
-# }
+  source_ranges = ["0.0.0.0/0"]
+}
 
 resource "google_compute_firewall" "airflow-allow-icmp" {
   name    = "airflow-allow-icmp"
