@@ -1,12 +1,7 @@
 terraform {
-  # required_providers {
-  #   google = {
-  #     source  = "hashicorp/google"
-  #     version = "4.28.0"
-  #   }
-  # }
   cloud {
     organization = "ila-bi"
+
     workspaces {
       name = "terraform-gcp"
     }
