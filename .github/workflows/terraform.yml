@@ -55,12 +55,12 @@ jobs:
 
     # Update Pull Request adds a comment to the pull request with the results of the format, init and plan steps
     - name: Update Pull Request
-      uses: actions/github-script@6
+      uses: actions/github-script
       if: github.event_name == 'pull_request'
       env:
         PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.ACCESS_TOKEN }}
         script: |
           const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
           #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
