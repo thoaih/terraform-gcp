@@ -84,7 +84,7 @@ resource "google_compute_firewall" "allow-voip" {
   network = google_compute_network.vpc_network.name
 
   allow {
-    protocol = "tcp"
+    protocol = ["tcp", "udp"]
     ports    = ["1112"]
   }
 
