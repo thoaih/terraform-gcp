@@ -123,7 +123,7 @@ resource "google_compute_firewall" "airflow-allow-nfs" {
     ports    = ["2049"]
   }
 
-  source_ranges = ["10.148.0.0/20", "172.16.0.32/28", "10.59.248.146"]
+  source_ranges = ["10.148.0.0/20", "172.16.0.32/28"]
 }
 
 # Cloud NAT
