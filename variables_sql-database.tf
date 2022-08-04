@@ -15,7 +15,7 @@ variable "database_version" {
 variable "db_machine_type" {
   description = "The machine type to use"
   type        = string
-  default     = "db-custom-1-4096"
+  default     = "db-standard-2"
 }
 
 variable "db_disk_size_gb" {
