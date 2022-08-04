@@ -80,7 +80,7 @@ resource "google_container_node_pool" "airflow-webserver" {
     image_type   = var.image_type_webserver
     spot         = true
     labels       = var.webserver_labels
-    taint = [var.spot_taint]
+    taint        = [var.spot_taint]
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     # service_account = google_service_account.default.email
@@ -113,7 +113,7 @@ resource "google_container_node_pool" "airflow-celery-workers" {
     image_type   = var.image_type_celery_workers
     spot         = true
     labels       = var.celery_workers_labels
-    taint = [var.spot_taint]
+    taint        = [var.spot_taint]
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     # service_account = google_service_account.default.email
@@ -146,7 +146,7 @@ resource "google_container_node_pool" "airflow-k8s-workers" {
     image_type   = var.image_type_k8s_workers
     spot         = true
     labels       = var.k8s_workers_labels
-    taint = [var.spot_taint]
+    taint        = [var.spot_taint]
 
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     # service_account = google_service_account.default.email
