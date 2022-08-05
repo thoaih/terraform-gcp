@@ -20,3 +20,4 @@ terraform import google_container_node_pool.airflow-core ila-collab/asia-southea
 terraform import google_container_node_pool.airflow-webserver ila-collab/asia-southeast1-a/ila-airflow-cluster/airflow-webserver
 terraform import google_container_node_pool.airflow-celery-workers ila-collab/asia-southeast1-a/ila-airflow-cluster/airflow-celery-workers
 terraform import google_container_node_pool.airflow-k8s-workers ila-collab/asia-southeast1-a/ila-airflow-cluster/airflow-k8s-workers
+terraform import google_service_networking_connection.peering_connection 
