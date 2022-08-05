@@ -84,7 +84,7 @@ variable "webserver_node_pool_name" {
 variable "machine_type_webserver" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "e2-standard-2"
+  default     = "t2d-standard-2"
 }
 
 variable "image_type_webserver" {
