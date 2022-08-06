@@ -37,10 +37,12 @@ variable "airflow_ports" {
 
 variable "nfs_ports" {
   description = "Ports of NFS services"
+  type        = list(any)
   default     = ["2049"]
 }
 
 variable "keda_ports" {
   description = "Ports of KEDA services"
+  type        = list(any)
   default     = ["6443"]
 }
