@@ -6,9 +6,9 @@ variable "project" {
 }
 
 variable "GOOGLE_CREDENTIALS" {
-  # default = "/Users/thoai.ho/Downloads/ila-collab-terraform.json"
   description = "service account key file json"
   type        = string
+  sensitive   = true
 }
 
 variable "region" {
