@@ -58,12 +58,10 @@ variable "database_username" {
   description = "The name of the user. Changing this forces a new resource to be created"
   type        = string
   sensitive   = true
-  default     = "bi"
 }
 
 variable "database_password" {
   description = "The password for the user. Can be updated"
   type        = string
   sensitive   = true
-  default     = "bI2022"
 }
