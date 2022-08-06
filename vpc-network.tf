@@ -106,3 +106,15 @@ resource "google_compute_firewall" "airflow-allow-nfs" {
 
   source_ranges = [var.internal_ip_range, var.control_plan_ip_range]
 }
+
+resource "google_compute_firewall" "airflow-allow-keda" {
+  name    = "airflow-allow-keda"
+  network = google_compute_network.vpc_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = var.keda_ports
+  }
+
+  source_ranges = [var.internal_ip_range, var.control_plan_ip_range]
+}
