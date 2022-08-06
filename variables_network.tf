@@ -39,3 +39,8 @@ variable "nfs_ports" {
   description = "Ports of NFS services"
   default     = ["2049"]
 }
+
+variable "keda_ports" {
+  description = "Ports of KEDA services"
+  default     = ["6443"]
+}
