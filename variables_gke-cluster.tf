@@ -174,7 +174,7 @@ variable "autoscaling_min_celery_workers_node" {
 variable "autoscaling_max_celery_workers_node" {
   description = "Maximum number of nodes in the NodePool"
   type        = number
-  default     = 2
+  default     = 4
 }
 
 variable "celery_workers_labels" {
