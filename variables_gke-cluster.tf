@@ -144,7 +144,7 @@ variable "celery_workers_node_pool_name" {
 variable "machine_type_celery_workers" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "n2-custom-8-16384"
+  default     = "n2-custom-4-16384"
 }
 
 variable "image_type_celery_workers" {
