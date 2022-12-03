@@ -22,6 +22,3 @@ variable "zone" {
   type        = string
   default     = "asia-southeast1-a"
 }
-
-
-
