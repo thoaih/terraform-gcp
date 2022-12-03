@@ -84,7 +84,7 @@ variable "webserver_node_pool_name" {
 variable "machine_type_webserver" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "t2d-standard-2"
+  default     = "n2d-standard-2"
 }
 
 variable "image_type_webserver" {
@@ -144,7 +144,7 @@ variable "celery_workers_node_pool_name" {
 variable "machine_type_celery_workers" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "n2-custom-4-16384"
+  default     = "n2-standard-2"
 }
 
 variable "image_type_celery_workers" {
@@ -194,7 +194,7 @@ variable "k8s_workers_node_pool_name" {
 variable "machine_type_k8s_workers" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "c2-standard-4"
+  default     = "n2-standard-4"
 }
 
 variable "image_type_k8s_workers" {
