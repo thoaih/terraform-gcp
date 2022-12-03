@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "ila-bi"
+    organization = "uit-cloud-computing"
 
     workspaces {
       name = "terraform-gcp"

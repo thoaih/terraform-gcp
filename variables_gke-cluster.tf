@@ -2,7 +2,7 @@
 variable "cluster_name" {
   description = "The name of the cluster"
   type        = string
-  default     = "ila-bi-cluster"
+  default     = "airflow-cluster"
 }
 
 variable "private_endpoint" {
