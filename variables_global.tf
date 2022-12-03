@@ -2,7 +2,7 @@
 variable "project" {
   description = "Project ID on Google Cloud Platform"
   type        = string
-  default     = "ila-collab"
+  default     = "uit-cloud-computing"
 }
 
 variable "GOOGLE_CREDENTIALS" {
