@@ -40,7 +40,7 @@ variable "core_node_pool_name" {
 variable "machine_type_core" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "t2d-standard-8"
+  default     = "t2d-standard-4"
 }
 
 variable "image_type_core" {
@@ -194,7 +194,7 @@ variable "k8s_workers_node_pool_name" {
 variable "machine_type_k8s_workers" {
   description = "The name of a Google Compute Engine machine type"
   type        = string
-  default     = "c2-standard-8"
+  default     = "c2-standard-4"
 }
 
 variable "image_type_k8s_workers" {
