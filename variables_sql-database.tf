@@ -21,7 +21,7 @@ variable "db_machine_type" {
 variable "db_disk_size_gb" {
   description = "The size of data disk, in GB"
   type        = number
-  default     = 12
+  default     = 15
 }
 
 variable "db_disk_type" {
